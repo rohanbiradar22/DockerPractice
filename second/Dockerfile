@@ -7,7 +7,8 @@ COPY . /app
 RUN apt-get update -y && \
     apt-get install -y curl && \
     curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
-    apt-get install -y nodejs
+    apt-get install -y nodejs && \
+    npm install -g nodemon
 
 ENV PORT 3000
 
