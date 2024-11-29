@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN  apt-get update  && apt-get install nodejs
+RUN  apt-get update -y && apt-get install -y nodejs
 
 ENV NAME Euu
 
