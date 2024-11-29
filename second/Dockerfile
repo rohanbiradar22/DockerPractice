@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN  apt-get update -y && npm i nodemon
+RUN  apt-get update -y && apt-get install -y nodejs && npm i 
 
 ENV PORT 3000
 
