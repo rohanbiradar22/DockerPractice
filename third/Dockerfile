@@ -15,7 +15,7 @@ RUN npm install
 
 ENV PORT 3000
 
-CMD node index.js
+
 
 
 
@@ -24,8 +24,6 @@ CMD node index.js
 FROM gcr.io/distroless/nodejs22-debian12
 
 WORKDIR /app
-
-COPY package*.json ./
 
 COPY --from=build /app .
 
