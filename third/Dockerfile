@@ -21,9 +21,13 @@ CMD node index.js
 
 # STAGE 2
 
-# FROM gcr.io/distroless/nodejs22-debian12
+FROM gcr.io/distroless/nodejs22-debian12
 
-# WORKDIR /app
+WORKDIR /app
 
-# COPY package*.json ./
+COPY package*.json ./
+
+COPY --from=build /app .
+
+CMD ["index.js"]
 
